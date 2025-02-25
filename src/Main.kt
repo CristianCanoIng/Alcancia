@@ -1,3 +1,5 @@
+import kotlin.random.Random
+
 fun main() {
     var mon20 = 0
     var mon50 = 0
@@ -7,7 +9,7 @@ fun main() {
     var suma = 0
     var ahorro = 0
 
-    do {
+    /*do {
 
         println("Alcancia\n\n")
 
@@ -81,4 +83,18 @@ fun main() {
             }
         }
     } while (opcion != 5)
+*/
+    println("Formas de agregar numeros aleatorios")
+
+    val numero = Random.nextInt(10, 50)
+    println(numero)
+
+    val numeroDouble = Random.nextDouble(2.0, 15.0)
+    println(numeroDouble)
+
+    val numeroFloat = Random.nextFloat()
+
+    val lista = List(5) { Random.nextInt(1, 100) }
+    println(lista)
+
 }
