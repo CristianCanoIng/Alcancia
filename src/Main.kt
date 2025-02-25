@@ -1,7 +1,7 @@
 import kotlin.random.Random
 
 fun main() {
-    var mon20 = 0
+/*    var mon20 = 0
     var mon50 = 0
     var mon100 = 0
     var mon200 = 0
@@ -9,7 +9,7 @@ fun main() {
     var suma = 0
     var ahorro = 0
 
-    /*do {
+    do {
 
         println("Alcancia\n\n")
 
@@ -83,7 +83,7 @@ fun main() {
             }
         }
     } while (opcion != 5)
-*/
+
     println("Formas de agregar numeros aleatorios")
 
     val numero = Random.nextInt(10, 50)
@@ -96,5 +96,29 @@ fun main() {
 
     val lista = List(5) { Random.nextInt(1, 100) }
     println(lista)
+ */
 
+    var dado1:Int
+    var dado2:Int
+    var suma1 = 0
+    var suma2 = 0
+    var ganador:Int
+
+    println("Dados         D1      D2")
+
+    for(i in 1..10){
+        dado1 = Random.nextInt(1, 6)
+        dado2 = Random.nextInt(1, 6)
+        suma1 = suma1+dado1
+        suma2 = suma2+dado2
+        println("Tirada: ${i}.    ${dado1}        ${dado2}")
+    }
+
+    println("D1  ${suma1}  D2 ${suma2}")
+
+    if(suma1 > suma2){
+        println("Gana el dado 1")
+    }else{
+        println("Gana el dado 2")
+    }
 }
