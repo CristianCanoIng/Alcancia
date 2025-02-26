@@ -1,124 +1,27 @@
+import java.util.Scanner
 import kotlin.random.Random
 
 fun main() {
-/*    var mon20 = 0
-    var mon50 = 0
-    var mon100 = 0
-    var mon200 = 0
-    var mon500 = 0
-    var suma = 0
-    var ahorro = 0
-
+    var intentos = 3
     do {
+        println("Ingrese codigo de acceso: ")
+        var n = readln().toInt()
 
-        println("Alcancia\n\n")
-
-        println("1 Agregar moneda")
-        println("2 Contar monedas")
-        println("3 Calcular total")
-        println("4 Romper alcancia")
-        println("5 Cerrar")
-
-        println("\n¿Que Opcion desea?\n\n")
-        var opcion = readln().toInt()
-
-        when (opcion) {
-            1 -> {
-                println("Monedas\n")
-                println("1 20")
-                println("2 50")
-                println("3 100")
-                println("4 200")
-                println("5 500")
-
-                println("\n¿Que moneda desea agregar?\n")
-
-                var moneda = readln().toInt()
-
-                when (moneda) {
-                    1 -> {
-                        println("Moneda de 20 agregada\n")
-                        mon20 += 1
-                    }
-
-                    2 -> {
-                        println("Moneda de 50 agregada\n")
-                        mon50 += 1
-                    }
-
-                    3 -> {
-                        println("Moneda de 100 agregada\n")
-                        mon100 += 1
-                    }
-
-                    4 -> {
-                        println("Moneda de 200 agregada\n")
-                        mon200 += 1
-                    }
-
-                    5 -> {
-                        println("Moneda de 500 agregada\n")
-                        mon500 += 1
-                    }
-                }
-            }
-
-            2 -> {
-                suma = mon20+mon50+mon100+mon200+mon500
-                println("La cantidad de monedas es:  ${suma}")
-            }
-
-            3 -> {
-                ahorro = (mon20*20)+(mon50*50)+(mon100*100)+(mon200*200)+(mon500*500)
-                println("Tu ahorro es:  ${ahorro}")
-            }
-
-            4 -> {
-                mon20=0
-                mon50=0
-                mon100=0
-                mon200=0
-                mon500=0
-                println("Alcancia rota")
-            }
+        if (n >= 1000 && n <= 1999) {
+            println("Bienvenido empleado ${n}}")
+        } else if (n >= 2000 && n <= 2999) {
+            println("Bienvenido visitante")
+            println("Ingresa nombre: ")
+            var nombre= readln().toString()
+            println("Ingresa motivo de ingreso: ")
+            var motivo= readln().toString()
+            println("\nIngreso ${nombre} con motivo de ${motivo}")
+        } else {
+            intentos = intentos-1
+            println("Codigo Incorrecto, te quedan ${intentos} intentos")
         }
-    } while (opcion != 5)
 
-    println("Formas de agregar numeros aleatorios")
+    }while(intentos!=0)
 
-    val numero = Random.nextInt(10, 50)
-    println(numero)
-
-    val numeroDouble = Random.nextDouble(2.0, 15.0)
-    println(numeroDouble)
-
-    val numeroFloat = Random.nextFloat()
-
-    val lista = List(5) { Random.nextInt(1, 100) }
-    println(lista)
- */
-
-    var dado1:Int
-    var dado2:Int
-    var suma1 = 0
-    var suma2 = 0
-    var ganador:Int
-
-    println("Dados         D1      D2")
-
-    for(i in 1..10){
-        dado1 = Random.nextInt(1, 6)
-        dado2 = Random.nextInt(1, 6)
-        suma1 = suma1+dado1
-        suma2 = suma2+dado2
-        println("Tirada: ${i}.    ${dado1}        ${dado2}")
-    }
-
-    println("D1  ${suma1}  D2 ${suma2}")
-
-    if(suma1 > suma2){
-        println("Gana el dado 1")
-    }else{
-        println("Gana el dado 2")
-    }
+    println("Acceso bloqueado")
 }
